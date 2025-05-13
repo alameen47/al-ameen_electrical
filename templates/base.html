@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Al-Ameen Electrical Maintenance Works{% endblock %}</title>
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-5">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="mb-3" style="width: 100px;">
+        <h1>Al-Ameen Electrical Maintenance Works</h1>
+        <p>Trust and Reliability</p>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <a class="navbar-brand" href="{{ url_for('main.index') }}">Al-Ameen</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('main.about') }}">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('main.services') }}">Our Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('main.gallery') }}">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('main.testimonials') }}">Testimonials</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('main.faq') }}">FAQ</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('main.blog') }}">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('main.contact') }}">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2024 Al-Ameen Electrical Maintenance Works. All Rights Reserved.</p>
+        <div>
+            <a href="https://www.facebook.com/AlAmeenElectrical" class="text-white mr-3">
+                <i class="fab fa-facebook-f"></i> Facebook</a>
+            <a href="https://wa.me/+2348025030536" class="text-white">
+                <i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
+    </footer>
+</body>
+</html>

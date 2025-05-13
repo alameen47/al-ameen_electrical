@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Blog - Al-Ameen Electrical Maintenance Works{% endblock %}
+
+{% block content %}
+<section id="blog" class="py-5">
+    <div class="container">
+        <h2 class="text-center">Blog</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='images/blog1.jpg') }}" class="card-img-top" alt="Blog Image 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Latest Electrical Trends</h5>
+                        <p class="card-text">Stay updated with the latest trends in the electrical industry.</p>
+                        <a href="https://exampleblog1.com" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='images/blog2.jpg') }}" class="card-img-top" alt="Blog Image 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Tips for Safe Electrical Work</h5>
+                        <p class="card-text">Learn some essential tips for ensuring safety during electrical work.</p>
+                        <a href="https://exampleblog2.com" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='images/blog3.jpg') }}" class="card-img-top" alt="Blog Image 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Our Recent Projects</h5>
+                        <p class="card-text">Take a look at some of our recent electrical projects.</p>
+                        <a href="https://exampleblog3.com" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
